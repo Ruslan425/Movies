@@ -32,6 +32,8 @@ class MainActivity : AppCompatActivity() {
         setTheme(R.style.Theme_Movies)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        
+        initRecyclerView() 
 
         val dataObserver = Observer<List<Result>> { list ->
             adapter.setList(list)
